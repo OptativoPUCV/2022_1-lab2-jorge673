@@ -38,7 +38,8 @@ List * createList() {
 
 void * firstList(List * list) {
 
-  if(list->head!=NULL){
+  if(list->head != NULL)
+  {
     list->current=list->head;
     return list->current->data;
   }
@@ -46,31 +47,45 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  if(list->current != NULL && list->current->next != NULL){
+  if(list->current != NULL && list->current->next != NULL)
+  {
+
     list->current=list->current->next;
-    return list->current->data;
+
+    if(list->current!=NULL){
+      return list->current->data;
+    }
   }
   return NULL;
 }
 
 void * lastList(List * list) {
-  if(list->tail!=NULL && list->tail->data!=NULL){
-    return list->current=list->tail;
+  if(list->tail != NULL)
+  {
+
+    list->current=list->tail;
+
+    return list->current->data;
   }
   return NULL;
 }
 
 void * prevList(List * list) {
-  if(list->current->prev!=NULL && list->current->prev->data!=NULL){
+  if(list->current != NULL && list->current->prev != NULL)
+  {
+    list->current=list->current->prev;
 
-    return list->current=list->current->prev;
+    if(list->current!=NULL){
+      return list->current->data;
+    }
   }
   return NULL;
 }
 
 void pushFront(List * list, void * data) {
   Node* n=createNode(data);
-  if(list->head==NULL){
+  if(list->head==NULL)
+  {
     list->head=n;
     list->tail=n;
   }else{
@@ -81,13 +96,23 @@ void pushFront(List * list, void * data) {
 }
 
 void pushBack(List * list, void * data) {
-    list->current = list->tail;
-    pushCurrent(list,data);
+  list->current=list->head;
+  pushCurrent(list,data);
 }
 
-void pushCurrent(List * list, void * data) {
-  
-  
+void pushCurrent(List * list, void * data){
+  Node* n=createNode(data);
+  if (list->current->next==NULL)
+  {
+    list->current->next=n;
+    n->prev=list->current;
+    list->tail=n;
+  }else{
+    list->current->next=n;
+    n->next=list->current->next;
+    n->prev=list->current;
+  }
+
 }
 
 void * popFront(List * list) {
@@ -101,6 +126,14 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  /*if(list->current==NULL) return NULL;
+
+  if(list->current->prev!=NULL){
+    list->current->prev->next=list->current->next;
+  }else{
+    list->head=list->current->next;
+    list->head->prev=NULL;
+  }*/
   return NULL;
 }
 
