@@ -227,3 +227,17 @@ sá., 19 de mar. de 2022 22:30:31:
  tests:  3|4
 total_score: 25/70
 c82d3e5
+sá., 19 de mar. de 2022 22:34:19: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:0:
+list.c: In function 'nextList':
+list.c:50:22: error: format '%d' expects argument of type 'int', but argument 2 has type 'void *' [-Werror=format=]
+     printf("\nnodo: %d\n",list->current->data);
+                      ^
+list.c:52:22: error: format '%d' expects argument of type 'int', but argument 2 has type 'void *' [-Werror=format=]
+     printf("\nnodo: %d\n",list->current->data);
+                      ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8beb922
