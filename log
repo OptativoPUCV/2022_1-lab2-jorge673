@@ -188,3 +188,9 @@ sá., 19 de mar. de 2022 22:07:07:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 4bdd573
+sá., 19 de mar. de 2022 22:12:51: 
+ list.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  3|4
+total_score: 25/70
+4d713b9
