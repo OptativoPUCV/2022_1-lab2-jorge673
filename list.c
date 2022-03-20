@@ -22,18 +22,18 @@ typedef List List;
 Node * createNode(void * data) {
 
   Node* n=(Node*)calloc(1,sizeof(Node));
+
   n->data=data;
   n->next=NULL;
-
   return n;
 }
 
 List * createList() {
-  list* l=(List*)malloc(1,sizeof(list));
-  list->head=NULL
-  list->tail=NULL
-  list->current=NULL
-  return NULL;
+  List* l=(List*)calloc(1,sizeof(List));
+  l->head=NULL;
+  l->tail=NULL;
+  l->current=NULL;
+  return l;
 }
 
 void * firstList(List * list) {
@@ -68,7 +68,7 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-  node* n=createNode(data)
+  Node* n=createNode(data);
   if(list->head==NULL){
     list->head=n;
     list->tail=n;
