@@ -46,11 +46,9 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  if(list->current->next != NULL){
-    printf("\nnodo: %d\n",list->current->data);
+  if(list->current->next != NULL && list->current != NULL){
     list->current=list->current->next;
-    printf("\nnodo: %d\n",list->current->data);
-    return NULL;
+    return list->current->data;
   }
   return NULL;
 }
