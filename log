@@ -350,3 +350,13 @@ Sun Mar 20 19:32:27 UTC 2022:
  tests:  11|1
 total_score: 55/70
 193e4cf
+Sun Mar 20 19:33:01 UTC 2022: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘popCurrent’:
+list.c:135:3: error: expected identifier before ‘}’ token
+   }
+   ^
+Compilation failed
+62446d1
