@@ -166,3 +166,8 @@ sá., 19 de mar. de 2022 21:59:07:
  tests:  3|4
 total_score: 25/70
 a18dea4
+sá., 19 de mar. de 2022 22:00:44: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+ tests:  0|0
+1966c81
