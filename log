@@ -472,3 +472,9 @@ list.c:157:10: error: return makes pointer from integer without a cast [-Werror=
 cc1: all warnings being treated as errors
 Compilation failed
 523be40
+Sun Mar 20 20:17:18 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+17dd162

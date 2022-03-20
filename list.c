@@ -150,7 +150,7 @@ void * popCurrent(List * list) {
     
   }
   
-  void ret=list->current->data;
+  void* ret=list->current->data;
   
   free(list->current);
     
