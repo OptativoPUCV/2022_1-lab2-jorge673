@@ -21,7 +21,7 @@ typedef List List;
 
 Node * createNode(void * data) {
 
-  Node* n=(Node*)calloc(1,sizeof(Node));
+  Node* n=(Node*)malloc(sizeof(Node));
 
   n->data=data;
   n->next=NULL;
@@ -29,7 +29,7 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-  List* l=(List*)calloc(1,sizeof(List));
+  List* l=(List*)malloc(sizeof(List));
   l->head=NULL;
   l->tail=NULL;
   l->current=NULL;
